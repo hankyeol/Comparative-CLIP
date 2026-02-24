@@ -1,3 +1,11 @@
 *.pyc
 __pycache__
 precomputed_image_features
+
+# Python
+.env
+venv/
+.DS_Store
+
+# Outputs
+stored_models/*.pkl

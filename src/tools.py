@@ -53,20 +53,22 @@ DATASETS = [
 ]
 
 # Dataset paths - These paths should be modified according to your environment
-# All datasets should be placed in the /mnt/datasets/comparative-clip/ directory
-IMAGENET_DIR = '/mnt/datasets/comparative-clip/ImageNet2012'
-IMAGENETV2_DIR = '/mnt/datasets/comparative-clip/ImageNetV2'
-CALTECH256_DIR = '/mnt/datasets/comparative-clip/Caltech256'
-CIFAR100_DIR = '/mnt/datasets/comparative-clip/CIFAR100'
-CUB_DIR = '/mnt/datasets/comparative-clip/cub200'
-EUROSAT_DIR = '/mnt/datasets/comparative-clip/eurosat'
-PLACES365_DIR = '/mnt/datasets/comparative-clip/places365'
-PETS_DIR = '/mnt/datasets/comparative-clip/pets'
-FOOD101_DIR = '/mnt/datasets/comparative-clip/food101'
-DTD_DIR = '/mnt/datasets/comparative-clip/dtd'
-FLOWERS102_DIR = '/mnt/datasets/comparative-clip/flowers102'
-FGVCAIRCRAFT_DIR = '/mnt/datasets/comparative-clip/fgvcaircraft'
-CARS_DIR = '/mnt/datasets/comparative-clip/cars'
+# Users can override the default dataset path via the COMPARATIVE_CLIP_DATA_DIR environment variable
+DATASET_BASE_DIR = os.getenv('COMPARATIVE_CLIP_DATA_DIR', '/mnt/datasets/comparative-clip')
+
+IMAGENET_DIR = os.path.join(DATASET_BASE_DIR, 'ImageNet2012')
+IMAGENETV2_DIR = os.path.join(DATASET_BASE_DIR, 'ImageNetV2')
+CALTECH256_DIR = os.path.join(DATASET_BASE_DIR, 'Caltech256')
+CIFAR100_DIR = os.path.join(DATASET_BASE_DIR, 'CIFAR100')
+CUB_DIR = os.path.join(DATASET_BASE_DIR, 'cub200')
+EUROSAT_DIR = os.path.join(DATASET_BASE_DIR, 'eurosat')
+PLACES365_DIR = os.path.join(DATASET_BASE_DIR, 'places365')
+PETS_DIR = os.path.join(DATASET_BASE_DIR, 'pets')
+FOOD101_DIR = os.path.join(DATASET_BASE_DIR, 'food101')
+DTD_DIR = os.path.join(DATASET_BASE_DIR, 'dtd')
+FLOWERS102_DIR = os.path.join(DATASET_BASE_DIR, 'flowers102')
+FGVCAIRCRAFT_DIR = os.path.join(DATASET_BASE_DIR, 'fgvcaircraft')
+CARS_DIR = os.path.join(DATASET_BASE_DIR, 'cars')
 
 # List of compatible backbones.
 BACKBONES = [

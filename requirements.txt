@@ -1,0 +1,9 @@
+torch
+torchvision
+torchmetrics
+tqdm
+Pillow
+numpy
+termcolor
+imagenetv2_pytorch
+git+https://github.com/openai/CLIP.git

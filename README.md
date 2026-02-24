@@ -5,7 +5,12 @@
    - Download the features from [here](https://huggingface.co/hk1ee/Comparative-CLIP/tree/main)
    - Place the downloaded `precomputed_image_features` directory in the root directory of this project
 
-2. Run experiment scripts:
+2. Configure dataset paths:
+   - Set the `COMPARATIVE_CLIP_DATA_DIR` environment variable to the directory where your datasets (e.g., ImageNet, CUB, etc.) are located.
+   - Example: `export COMPARATIVE_CLIP_DATA_DIR=/path/to/your/datasets`
+   - By default, the code looks in `/mnt/datasets/comparative-clip`.
+
+3. Run experiment scripts:
    ```bash
    cd scripts/experiments
    # Reproduce Table 2
